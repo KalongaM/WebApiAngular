@@ -1,0 +1,13 @@
+src 
++--- app 
+    +--  nurses
+       +--nurses. component.ts|.html.css
+    +--- nurse 
+       +--nurse.component.ts|.html|.css
+
+    +--- nurse-list
+       +--nurse-list.component.ts|.html|.css
+
+    +--- shared
+       |--nurse.service.ts
+       |--nurse.model.ts         

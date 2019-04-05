@@ -1,0 +1,31 @@
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+  <input type="hidden" name="NurseID" #NurseID="ngModel" [(ngModel)]="service.formData.NurseID">
+  <div class="form-group">
+    <label>Full Name</label>
+    <input name="FullName" #FullName="ngModel" [(ngModel)]="service.formData.FUllName" class="form-control" required>
+    <div class="validation-error" *ngIf="FullName.invalid && FullName.touched">This Field is required.</div>
+  </div>
+
+  <div class="form-group">
+    <label>Type</label>
+    <input name="Type" #Type="ngModel" [(ngModel)]="service.formData.Type" class="form-control">
+    <div class="validation-error" *ngIf="Type.invalid && Type.touched">This Field is required.</div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Nurse Code</label>
+      <input name="NurseCode" #NurseCode="ngModel" [(ngModel)]="service.formData.NurseCode" class="form-control">
+      <div class="validation-error" *ngIf="NurseCode.invalid && NurseCode.touched">This Field is required.</div>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Mobile</label>
+      <input name="Mobile" #Mobile="ngModel" [(ngModel)]="service.formData.Mobile" class="form-control">
+      <div class="validation-error" *ngIf="Mobile.invalid && Mobile.touched">This Field is required.</div>
+    </div>
+  
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">Submit</button>
+  </div>
+</form>
